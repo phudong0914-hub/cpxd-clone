@@ -3,7 +3,7 @@ import { Swimlane } from './Swimlane';
 import { SWIM_DATA } from '../data/cpxdData';
 import { FormLink } from './FormLink';
 
-export const PanelCapLai: React.FC = () => {
+export const PanelCapLai: React.FC<{ searchQuery?: string }> = ({ searchQuery = '' }) => {
   return (
     <>
       <div className="section-title"><h3>Cấp lại Giấy phép xây dựng</h3><span className="tag">Điều 64 Luật XD 2025 · Điều 64 NĐ 217/2026</span></div>

@@ -3,7 +3,7 @@ import { Swimlane } from './Swimlane';
 import { SWIM_DATA } from '../data/cpxdData';
 import { FormLink } from './FormLink';
 
-export const PanelDieuChinh: React.FC = () => {
+export const PanelDieuChinh: React.FC<{ searchQuery?: string }> = ({ searchQuery = '' }) => {
   return (
     <>
       <div className="section-title"><h3>Khi nào phải điều chỉnh Giấy phép xây dựng?</h3><span className="tag">khoản 1 Điều 63 · NĐ 217/2026</span></div>

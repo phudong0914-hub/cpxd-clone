@@ -3,7 +3,7 @@ import { Swimlane } from './Swimlane';
 import { FormLink } from './FormLink';
 import { SWIM_DATA } from '../data/cpxdData';
 
-export const PanelSuaChua: React.FC = () => {
+export const PanelSuaChua: React.FC<{ searchQuery?: string }> = ({ searchQuery = '' }) => {
   return (
     <>
       <div className="section-title"><h3>Hồ sơ cấp GPXD Sửa chữa, Cải tạo, Di dời</h3><span className="tag">Điều 46 Luật XD 2025 · Điều 51, 61 NĐ 217/2026</span></div>

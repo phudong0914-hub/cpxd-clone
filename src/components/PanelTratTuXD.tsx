@@ -2,7 +2,7 @@ import React from 'react';
 import { Swimlane } from './Swimlane';
 import { SWIM_DATA } from '../data/cpxdData';
 
-export const PanelTratTuXD: React.FC = () => {
+export const PanelTratTuXD: React.FC<{ searchQuery?: string }> = ({ searchQuery = '' }) => {
   return (
     <>
       <div className="section-title"><h3>Trách nhiệm quản lý trật tự xây dựng</h3><span className="tag">Điều 47 Luật XD 2025 · Điều 67 NĐ 217/2026</span></div>

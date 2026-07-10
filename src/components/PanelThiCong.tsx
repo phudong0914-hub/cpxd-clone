@@ -2,7 +2,7 @@ import React from 'react';
 import { Swimlane } from './Swimlane';
 import { SWIM_DATA } from '../data/cpxdData';
 
-export const PanelThiCong: React.FC = () => {
+export const PanelThiCong: React.FC<{ searchQuery?: string }> = ({ searchQuery = '' }) => {
   return (
     <>
       <div className="section-title"><h3>Quản lý thi công xây dựng nhà ở riêng lẻ</h3><span className="tag">Điều 10 · NĐ 207/2026/NĐ-CP</span></div>

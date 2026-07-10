@@ -3,7 +3,7 @@ import { FormLink } from './FormLink';
 import { Swimlane } from './Swimlane';
 import { SWIM_DATA } from '../data/cpxdData';
 
-export const PanelCoThoiHan: React.FC = () => {
+export const PanelCoThoiHan: React.FC<{ searchQuery?: string }> = ({ searchQuery = '' }) => {
   return (
     <>
       <div className="section-title"><h3>Cấp Giấy phép xây dựng có thời hạn</h3><span className="tag">Điều 52, 62 NĐ 217/2026 · Điều 3 QĐ 29/2025/QĐ-UBND</span></div>

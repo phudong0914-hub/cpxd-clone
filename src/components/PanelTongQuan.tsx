@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormLink } from './FormLink';
 
-export const PanelTongQuan: React.FC = () => {
+export const PanelTongQuan: React.FC<{ searchQuery?: string }> = ({ searchQuery = '' }) => {
   return (
     <>
       <div className="section-title"><h3>1. Thẩm quyền cấp Giấy phép xây dựng</h3><span className="tag">Điều 2 QĐ 29/2025/QĐ-UBND · khoản 1 Điều 53 NĐ 217/2026</span></div>
