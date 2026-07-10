@@ -12,7 +12,6 @@ import { PanelThiCong } from './components/PanelThiCong';
 
 export default function App() {
   const [currentTab, setCurrentTab] = useState<string>('tongquan');
-  const [searchQuery, setSearchQuery] = useState<string>('');
 
   useEffect(() => {
     const handleChecklistClick = (e: MouseEvent) => {
@@ -46,15 +45,15 @@ export default function App() {
 
   const renderActivePanel = () => {
     switch (currentTab) {
-      case 'tongquan': return <PanelTongQuan searchQuery={searchQuery} />;
-      case 'capmoi': return <PanelCapMoi searchQuery={searchQuery} />;
-      case 'suachua': return <PanelSuaChua searchQuery={searchQuery} />;
-      case 'dieuchinh': return <PanelDieuChinh searchQuery={searchQuery} />;
-      case 'caplai': return <PanelCapLai searchQuery={searchQuery} />;
-      case 'cothoihan': return <PanelCoThoiHan searchQuery={searchQuery} />;
-      case 'ttxd': return <PanelTratTuXD searchQuery={searchQuery} />;
-      case 'thicong': return <PanelThiCong searchQuery={searchQuery} />;
-      default: return <PanelTongQuan searchQuery={searchQuery} />;
+      case 'tongquan': return <PanelTongQuan />;
+      case 'capmoi': return <PanelCapMoi />;
+      case 'suachua': return <PanelSuaChua />;
+      case 'dieuchinh': return <PanelDieuChinh />;
+      case 'caplai': return <PanelCapLai />;
+      case 'cothoihan': return <PanelCoThoiHan />;
+      case 'ttxd': return <PanelTratTuXD />;
+      case 'thicong': return <PanelThiCong />;
+      default: return <PanelTongQuan />;
     }
   };
 
@@ -123,18 +122,7 @@ export default function App() {
       </div>
 
       <div className="tabs-wrap">
-        <div className="search-bar" style={{ marginBottom: '16px', position: 'relative' }}>
-          <svg style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)', width: '20px', height: '20px', stroke: 'var(--color-text-secondary)', fill: 'none' }}>
-             <use href="#i-search" />
-          </svg>
-          <input
-            type="text"
-            placeholder="Tìm kiếm thủ tục, bước thực hiện, hồ sơ (VD: PCCC, Môi trường)..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            style={{ width: '100%', padding: '12px 12px 12px 42px', borderRadius: 'var(--radius-button)', border: '1px solid var(--color-border)', background: 'var(--color-surface)', color: 'var(--color-text)', fontSize: '15px', fontFamily: 'var(--font-sans)', boxShadow: 'var(--shadow-soft)' }}
-          />
-        </div>
+
         <nav className="tabs" id="tabs">
           {TABS.map((t) => {
             const isActive = currentTab === t.id;
